@@ -20,11 +20,11 @@ totaal_extra_vierge_olijfolie = aantalpersonnen * extra_vierge_olijfolie
 
 print(f'''
 {aantalpersonnen} Personen
-{totaal_komkommer} komkommer
-{totaal_fijn_zeezout} mespunt fijn zeezout
-{totaal_knoflook} knoflook
-{totaal_verse_dille}g verse dille
-{totaal_griekse_yoghurt}ml Griekse yoghurt 10%
-{totaal_wittewijnazijn}el wittewijnazijn
-{totaal_extra_vierge_olijfolie}el extra vierge olijfolie
+{totaal_komkommer:.1f} komkommer
+{totaal_fijn_zeezout:.1f} mespunt fijn zeezout
+{totaal_knoflook:.1f} knoflook
+{totaal_verse_dille:.1f}g verse dille
+{totaal_griekse_yoghurt:.1f}ml Griekse yoghurt 10%
+{totaal_wittewijnazijn:.1f}el wittewijnazijn
+{totaal_extra_vierge_olijfolie:.1f}el extra vierge olijfolie
 ''')
