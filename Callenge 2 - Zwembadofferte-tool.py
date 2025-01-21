@@ -1,13 +1,12 @@
-length = 8
-width = 3
-depth = 1.5
+length = float(input("Enter the length of the pool in meters: "))
+width = float(input("Enter the width of the pool in meters: "))
+depth = float(input("Enter the depth of the pool in meters: "))
+distance = float(input("Enter the distance to the prospect in kilometers: "))
 
 volume = round(length * width * depth, 2)
 
 excavation_cost = volume * 25
 soil_removal_cost = volume * 32.50
-
-distance = 60
 
 if volume < 20:
     fixed_price = 100
