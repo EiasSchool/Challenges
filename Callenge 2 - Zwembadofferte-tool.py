@@ -20,8 +20,25 @@ else:
 
 transport_cost = fixed_price + distance_cost
 
+if volume < 20:
+    finishing_cost_per_m2 = 250
+    red_color_cost = 25
+    color_choice_cost = 100
+else:
+    finishing_cost_per_m2 = 200
+    red_color_cost = 20
+    color_choice_cost = 125
+
+wall_area = 2 * (length * depth) + 2 * (width * depth)
+floor_area = length * width
+total_area = wall_area + floor_area
+
+finishing_cost = total_area * finishing_cost_per_m2
+total_finishing_cost = finishing_cost + red_color_cost + color_choice_cost
+
 print(f"Offerte voor een zwembad van {length} bij {width} bij {depth} meter (inhoud: {volume} m3)")
 print(f"Uitgraven:                         € {excavation_cost:.2f}")
 print(f"Afvoeren grond:              € {soil_removal_cost:.2f}")
 print(f"Voorrijkosten                    € {transport_cost:.2f}")
-print(f"Totaal:                               € {excavation_cost + soil_removal_cost + transport_cost:.2f}")
+print(f"Beton + tegel ({total_area:.2f} m2)    € {total_finishing_cost:.2f}")
+print(f"Totaal:                               € {excavation_cost + soil_removal_cost + transport_cost + total_finishing_cost:.2f}")
