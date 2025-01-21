@@ -36,9 +36,4 @@ total_area = wall_area + floor_area
 finishing_cost = total_area * finishing_cost_per_m2
 total_finishing_cost = finishing_cost + red_color_cost + color_choice_cost
 
-print(f"Offerte voor een zwembad van {length} bij {width} bij {depth} meter (inhoud: {volume} m3)")
-print(f"Uitgraven:                         € {excavation_cost:.2f}")
-print(f"Afvoeren grond:              € {soil_removal_cost:.2f}")
-print(f"Voorrijkosten                    € {transport_cost:.2f}")
-print(f"Beton + tegel ({total_area:.2f} m2)    € {total_finishing_cost:.2f}")
-print(f"Totaal:                               € {excavation_cost + soil_removal_cost + transport_cost + total_finishing_cost:.2f}")
+print(f"Totale oppervlakte voor afwerking: {total_area:.2f} m2")
